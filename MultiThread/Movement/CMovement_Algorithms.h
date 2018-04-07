@@ -37,20 +37,15 @@ struct SteeringData
 	//Small_Marbles = 0;
 	//Medium_Marbles = 1;
 	//Large_Marbles = 2; 
-	
-	
 	//If you wanted the pursuer to chase the large marbles you would then set
 	//m_iPursuingType = to 2;
 	int m_iEntityType; 
 
-
-
-
 	//if true then flocking is turned on
-	//bool m_bFlockingTagged;                                               //determins if the entity has been tagged for flocking.
+	//bool m_bFlockingTagged; //determins if the entity has been tagged for flocking.
 
 	//if true then an obstacle is near and must be avoided. might not be needed.
-	bool m_bObstTagged;                                                   //determins if the entity has been tagged for obstacle avoidance.  
+	//bool m_bObstTagged; //determins if the entity has been tagged for obstacle avoidance.  
 
 	//use these 2 ID's if you are only evading/persuing one single entity.
 	//these could also be used to represent types of entities if you want to evade or pursuit every entity of a certain type.
@@ -59,13 +54,13 @@ struct SteeringData
 
 	//use bools if more than one entity needs to be affected.
 	//chases other entities
-	bool m_bEntityisPursuing;                                            //if true then others will know to evade from this entity if their evade is on.
+	//bool m_bEntityisPursuing; //if true then others will know to evade from this entity if their evade is on.
 	
 	//if this entity is Pursuing then this type will determine what other entity types it needs to pursue.
 	int m_iPursuingType; //this type can represent chasing entities of this class type.
 	
 	//runs away from other entites
-	bool m_bEntityisEvading;                                              //if true the others that will know to pursuit this entity if their pursuit is on.
+	//bool m_bEntityisEvading; //if true the others that will know to pursuit this entity if their pursuit is on.
 
 	//steering flags determine which movement algorithms are being used.
 	int m_iSteeringFlags; //this is a bitflag.
@@ -121,8 +116,8 @@ private:
 	enum behavior_type
 	{
 		none               = 0x00000,
-		seek               = 0x00002,   //will set up
-		flee               = 0x00004,   // will set up
+		seek               = 0x00002,
+		flee               = 0x00004,
 		arrive             = 0x00008, //using
 		wander             = 0x00010, //using
 		cohesion           = 0x00020,
@@ -154,7 +149,7 @@ private:
 //----------------Structs-------------
 	SVector3D			SSteeringForce; //m_dRotForce
 	SVector3D			STarget;		//location of closest obj nearby to seek/persue.
-	SVector3D			SPursuer;		//location of the object to flee from. entities are fleeing from this
+	SVector3D			SPersuer;		//location of the object to flee from. entities are fleeing from this
 	SVector3D			SWanderTarget; 	  //the current position on the wander circle the agent is
 //----------------Doubles----------------
 	double			    m_dWanderJitter;
