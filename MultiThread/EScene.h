@@ -1,0 +1,13 @@
+#ifndef _ESCENE_H
+#define _ESCENE_H
+
+
+enum EScene
+{
+	SCENE_SCREENTEX,
+	SCENE_SCREENTEXT,
+	SCENE_STATICMESH
+};
+
+
+#endif

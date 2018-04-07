@@ -1,0 +1,6 @@
+Sound//Sounds//song1.wav
+Sound//Sounds//song2.wav
+Sound//Sounds//song3.wav
+Sound//Sounds//shoot.wav
+Sound//Sounds//score.wav
+Sound//Sounds//button.wav

@@ -1,0 +1,31 @@
+script
+
+	var int UI_SINGLE = 1;
+
+	var int UI_LEFTARROW   = 2;
+	var int UI_RIGHTARROW   = 3;
+	var int UI_SHOOT = 4;
+	var int UI_CHATBOX = 5;
+	var int UI_MENUBACKGROUND = 6;
+	var int UI_HOST = 7;
+	var int UI_CLIENT = 8;
+
+	AddUI( UI_MENUBACKGROUND, 1, 0, 0, -5, -30, 0, 15, 0, 0);
+	ActivateUI(UI_MENUBACKGROUND);
+	AddUI( UI_SINGLE, 1, 256, 64, 272, 200, 0, 12, 13, 0 );
+	ActivateUI( UI_SINGLE );
+	AddUI( UI_HOST, 1, 256, 64, 272, 300, 0, 19, 20, 0 );
+	ActivateUI(UI_HOST);
+	AddUI( UI_CLIENT, 1, 256, 64, 272, 400, 0, 21, 22, 0 );
+	ActivateUI(UI_CLIENT); 
+
+	AddUI( UI_LEFTARROW, 1, 128, 64, 144, 10, 0, 9, 10, 11 );
+
+	AddUI( UI_RIGHTARROW, 1, 128, 64, 400, 10, 0, 6, 7, 8 );
+
+	AddUI( UI_SHOOT, 1, 100, 100, 400, 500, 0, 2, 3, 4 );
+
+	//Text box
+	AddUI( UI_CHATBOX, 2, 256, 64, 10, 500, 0, 5, 5, 0 );
+
+endscript

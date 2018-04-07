@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BD5317A6-903F-4504-96A5-43417DB0B8DA}</ProjectGuid>
+    <RootNamespace>MultiThread</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IncludePath);$(DXSDK_DIR)Include</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(LibraryPath);$(DXSDK_DIR)Lib\x86</LibraryPath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IncludePath);$(DXSDK_DIR)Include</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(LibraryPath);$(DXSDK_DIR)Lib\x86</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)BulletforEveryone\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>$(ProjectDir)BulletforEveryone\src;%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>d3d9.lib;d3dx9d.lib;dxguid.lib;DxErr.lib;dinput8.lib;libbulletdynamics_d.lib;libbulletcollision_d.lib;libbulletmath_d.lib;dsound.lib;ws2_32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)BulletforEveryone\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="ResourceLoader.cpp" />
+    <ClCompile Include="BaseCore.cpp" />
+    <ClCompile Include="CoreManager.cpp" />
+    <ClCompile Include="Display.cpp" />
+    <ClCompile Include="GraphicsCore.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="Picking.cpp" />
+    <ClCompile Include="ScriptingCore\ScriptingEngine\Debugger\Debug.cpp" />
+    <ClCompile Include="UI.cpp" />
+    <ClCompile Include="UICore.cpp" />
+    <ClCompile Include="UIManager.cpp" />
+    <ClCompile Include="GameCore.cpp" />
+    <ClCompile Include="EntityCore.cpp" />
+    <ClCompile Include="EntityManager.cpp" />
+    <ClCompile Include="Physics.cpp" />
+    <ClCompile Include="Sound\DXSound.cpp" />
+    <ClCompile Include="Sound\DXSoundMgr.cpp" />
+    <ClCompile Include="SoundCore.cpp" />
+    <ClCompile Include="Sound\SoundEngine.cpp" />
+    <ClCompile Include="Sound\Waveform.cpp" />
+    <ClCompile Include="AI_Core.cpp" />
+    <ClCompile Include="FuzzyLogic\Module\AIplayer.cpp" />
+    <ClCompile Include="Movement\C2DMatrix.cpp" />
+    <ClCompile Include="FuzzyLogic\Module\module.cpp" />
+    <ClCompile Include="Movement_Algorithms.cpp" />
+    <ClCompile Include="Pathfinding\PathPlanner.cpp" />
+    <ClCompile Include="FuzzyLogic\Variable\Variables.cpp" />
+    <ClCompile Include="Pathfinding\Common\2D\Vector2d.cpp" />
+    <ClCompile Include="Networking\Client.cpp" />
+    <ClCompile Include="Networking\NetworkingCore.cpp" />
+    <ClCompile Include="Networking\NetworkingEngine.cpp" />
+    <ClCompile Include="Networking\Server.cpp" />
+    <ClCompile Include="Networking\ServerClientBase.cpp" />
+    <ClCompile Include="Networking\Socket.cpp" />
+    <ClCompile Include="EntityPropertyManager.cpp" />
+    <ClCompile Include="FontManager.cpp" />
+    <ClCompile Include="StaticMeshManager.cpp" />
+    <ClCompile Include="SteeringManager.cpp" />
+    <ClCompile Include="TextureManager.cpp" />
+    <ClCompile Include="DDScreenTex.cpp" />
+    <ClCompile Include="DDScreenText.cpp" />
+    <ClCompile Include="DDStaticMesh.cpp" />
+    <ClCompile Include="ScriptingCore\ScriptingCore.cpp" />
+    <ClCompile Include="ScriptingCore\ScriptingEngine\ScriptingEngine.cpp" />
+    <ClCompile Include="ScriptingCore\ScriptingEngine\EventManager\EventManager.cpp" />
+    <ClCompile Include="ScriptingCore\ScriptingEngine\FunctionManager\FunctionManager.cpp" />
+    <ClCompile Include="ScriptingCore\ScriptingEngine\NodeFactory\NodeFactory.cpp" />
+    <ClCompile Include="ScriptingCore\ScriptingEngine\ObjectManager\ObjectManager.cpp" />
+    <ClCompile Include="ScriptingCore\ScriptingEngine\ScriptNodes\ScriptNodes.cpp" />
+    <ClCompile Include="ScriptingCore\ScriptingEngine\VariableManager\VariableManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application.h" />
+    <ClInclude Include="ResourceLoader.h" />
+    <ClInclude Include="BaseCore.h" />
+    <ClInclude Include="CoreList.h" />
+    <ClInclude Include="CoreManager.h" />
+    <ClInclude Include="Display.h" />
+    <ClInclude Include="EScene.h" />
+    <ClInclude Include="GraphicsCore.h" />
+    <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="Picking.h" />
+    <ClInclude Include="ScriptingCore\ScriptingEngine\Debugger\Debug.h" />
+    <ClInclude Include="PhysicsMat.h" />
+    <ClInclude Include="UI.h" />
+    <ClInclude Include="UICore.h" />
+    <ClInclude Include="UIManager.h" />
+    <ClInclude Include="GameCore.h" />
+    <ClInclude Include="GameState.h" />
+    <ClInclude Include="EntityCore.h" />
+    <ClInclude Include="EntityManager.h" />
+    <ClInclude Include="EPhysics.h" />
+    <ClInclude Include="Physics.h" />
+    <ClInclude Include="Util.h" />
+    <ClInclude Include="ScriptingCore\ScriptingCore.h" />
+    <ClInclude Include="ScriptingCore\ScriptMessages.h" />
+    <ClInclude Include="ScriptingCore\ScriptingEngine\ScriptingEngine.h" />
+    <ClInclude Include="ScriptingCore\ScriptingEngine\ScriptUtil.h" />
+    <ClInclude Include="ScriptingCore\ScriptingEngine\EventManager\EventManager.h" />
+    <ClInclude Include="ScriptingCore\ScriptingEngine\FunctionManager\FunctionManager.h" />
+    <ClInclude Include="ScriptingCore\ScriptingEngine\NodeFactory\NodeFactory.h" />
+    <ClInclude Include="ScriptingCore\ScriptingEngine\ObjectManager\ObjectManager.h" />
+    <ClInclude Include="ScriptingCore\ScriptingEngine\ScriptNodes\BaseNode.h" />
+    <ClInclude Include="ScriptingCore\ScriptingEngine\ScriptNodes\ScriptNodes.h" />
+    <ClInclude Include="ScriptingCore\ScriptingEngine\VariableManager\VariableManager.h" />
+    <ClInclude Include="Sound\DXSound.h" />
+    <ClInclude Include="Sound\DXSoundMgr.h" />
+    <ClInclude Include="SoundCore.h" />
+    <ClInclude Include="Sound\SoundEngine.h" />
+    <ClInclude Include="Sound\Waveform.h" />
+    <ClInclude Include="AI_CORE.h" />
+    <ClInclude Include="Movement\CMovement_Algorithms.h" />
+    <ClInclude Include="FuzzyLogic\Module\AIplayer.h" />
+    <ClInclude Include="Pathfinding\Common\Graph\AStarHeuristicPolicies.h" />
+    <ClInclude Include="Pathfinding\Common\Graph\GraphAlgorithms.h" />
+    <ClInclude Include="Pathfinding\Common\Graph\GraphEdgeTypes.h" />
+    <ClInclude Include="Pathfinding\Common\Graph\GraphNodeTypes.h" />
+    <ClInclude Include="Pathfinding\Common\Graph\HandyGraphFunctions.h" />
+    <ClInclude Include="Pathfinding\Common\2D\InvertedAABBox2D.h" />
+    <ClInclude Include="FuzzyLogic\Module\module.h" />
+    <ClInclude Include="Pathfinding\Common\Graph\NodeTypeEnumerations.h" />
+    <ClInclude Include="Pathfinding\PathPlanner.h" />
+    <ClInclude Include="Pathfinding\Common\misc\PriorityQueue.h" />
+    <ClInclude Include="FuzzyLogic\Sets\ProxySet.h" />
+    <ClInclude Include="Pathfinding\resource.h" />
+    <ClInclude Include="FuzzyLogic\Rule,Term\rules.h" />
+    <ClInclude Include="FuzzyLogic\Sets\Set_LeftShoulder.h" />
+    <ClInclude Include="FuzzyLogic\Sets\Set_RightShoulder.h" />
+    <ClInclude Include="FuzzyLogic\Sets\set_singleton.h" />
+    <ClInclude Include="FuzzyLogic\Sets\Set_Triangle.h" />
+    <ClInclude Include="FuzzyLogic\Sets\Sets.h" />
+    <ClInclude Include="Pathfinding\Common\Graph\SparseGraph.h" />
+    <ClInclude Include="Pathfinding\Common\misc\Stream_Utility_Functions.h" />
+    <ClInclude Include="FuzzyLogic\Rule,Term\Terms.h" />
+    <ClInclude Include="Pathfinding\Common\misc\TypeToString.h" />
+    <ClInclude Include="FuzzyLogic\Variable\Variables.h" />
+    <ClInclude Include="Movement\c2dmatrix.h" />
+    <ClInclude Include="Pathfinding\Common\2D\C2DMatrix.h" />
+    <ClInclude Include="Pathfinding\constants.h" />
+    <ClInclude Include="Pathfinding\Common\2D\geometry.h" />
+    <ClInclude Include="Movement\SVector3D.h" />
+    <ClInclude Include="Pathfinding\Common\2D\Transformations.h" />
+    <ClInclude Include="Movement\Transformations.h" />
+    <ClInclude Include="Pathfinding\Common\2D\Vector2D.h" />
+    <ClInclude Include="Pathfinding\Common\2D\Wall2D.h" />
+    <ClInclude Include="Networking\Client.h" />
+    <ClInclude Include="Networking\NetworkingCore.h" />
+    <ClInclude Include="Networking\NetworkingEngine.h" />
+    <ClInclude Include="Networking\PacketPresets.h" />
+    <ClInclude Include="Networking\Server.h" />
+    <ClInclude Include="Networking\ServerClientBase.h" />
+    <ClInclude Include="Networking\Socket.h" />
+    <ClInclude Include="Networking\TimerTool.h" />
+    <ClInclude Include="EntityPropertyManager.h" />
+    <ClInclude Include="FontManager.h" />
+    <ClInclude Include="ResourceManager.h" />
+    <ClInclude Include="StaticMeshManager.h" />
+    <ClInclude Include="SteeringManager.h" />
+    <ClInclude Include="TextureManager.h" />
+    <ClInclude Include="EntityPropertyList.h" />
+    <ClInclude Include="FontList.h" />
+    <ClInclude Include="StaticMeshList.h" />
+    <ClInclude Include="SteeringList.h" />
+    <ClInclude Include="TextureList.h" />
+    <ClInclude Include="UIList.h" />
+    <ClInclude Include="AI_Message.h" />
+    <ClInclude Include="EntityMessage.h" />
+    <ClInclude Include="GameMessage.h" />
+    <ClInclude Include="GraphicsMessage.h" />
+    <ClInclude Include="Message.h" />
+    <ClInclude Include="Networking\NetCoreMessage.h" />
+    <ClInclude Include="SoundMessage.h" />
+    <ClInclude Include="SystemMessage.h" />
+    <ClInclude Include="UIMessage.h" />
+    <ClInclude Include="BaseManager.h" />
+    <ClInclude Include="DDCamera.h" />
+    <ClInclude Include="DDPicking.h" />
+    <ClInclude Include="DDPositions.h" />
+    <ClInclude Include="DDScreenTex.h" />
+    <ClInclude Include="DDScreenText.h" />
+    <ClInclude Include="DDScriptData.h" />
+    <ClInclude Include="DDStaticMesh.h" />
+    <ClInclude Include="DD_AIData\DDSteering.h" />
+    <ClInclude Include="DD_AIData\ddsteeringobstacles.h" />
+    <ClInclude Include="DynamicData.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

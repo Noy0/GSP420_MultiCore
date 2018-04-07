@@ -1,0 +1,43 @@
+script
+
+	PlaySound( 5, 0 );
+	PlaySound( 0, 1 );
+	DisableUI( 1 );
+	DisableUI(6);
+	DisableUI(7);
+	DisableUI(8);
+	//DisableUI( 3 );
+
+	//turn on arrows
+	ActivateUI( 2 );
+	ActivateUI( 3 );
+	ActivateUI( 4 );
+	//turn on text box
+	ActivateUI( 5 );
+
+	//platform
+	AddEntity( 5, 0, -6.0, 0);
+
+	//Balls!!!!!
+	AddEntity( 2, 0, -3.5, 0 );
+	AddEntity( 2, 2,0, -3.5, 4.0 );
+	AddEntity( 3, -3.0, -2.5, 8.0 );
+	AddEntity( 3, -2.0, -2.5, 4.0 );
+	AddEntity( 4, -15.0, -1.5, 1.0 );
+	AddEntity( 4, 16.0, -1.5, -9.0 );
+	AddEntity( 4, 5.0, -1.5, -13.0 );
+
+	//Boxes
+	//AddEntity( 7, 0.0, -4.0, 0.0 );
+	AddEntity( 7, 5.0, -4.0, 5.0 );
+	AddEntity( 7, -5.0, -4.0, 5.0 );
+	AddEntity( 7, -5.0, -4.0, -5.0 );
+	AddEntity( 7, 5.0, -4.0, -5.0 );
+
+	//walls
+	AddEntity( 7, 0.0, -4.0, -19.0 );
+	AddEntity( 7, 0.0, -4.0, 19.0 );
+	AddEntity( 7, -19.0, -4.0, 0.0 );
+	AddEntity( 7, 19.0, -4.0, 0.0 );
+
+endscript

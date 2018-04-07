@@ -1,0 +1,5 @@
+script
+
+	AddEntity( 1, 16.0, 0.0, 1.0 );
+	//AddEntity( 1, 2.0, 2.0, 18.0 );
+endscript

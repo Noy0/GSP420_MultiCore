@@ -1,0 +1,23 @@
+#ifndef _GAMESTATE_H
+#define _GAMESTATE_H
+
+enum EGameState
+{
+	GS_MENU,
+	GS_SINGLE,
+	GS_HOSTING,
+	GS_CLIENT
+};
+
+enum ESubGameState
+{
+	SGS_SPINNING,
+	SGS_POSTMOVE,
+	SGS_SHOOTING,
+	SGS_HOLD,
+	SGS_OPPONENT,
+	SGS_AI,
+	SGS_WAITONCLIENT
+};
+
+#endif

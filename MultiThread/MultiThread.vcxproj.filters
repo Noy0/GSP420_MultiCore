@@ -1,0 +1,618 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Cores">
+      <UniqueIdentifier>{3fe575b5-967d-4fc1-b360-2ca25d191168}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Cores\Graphics">
+      <UniqueIdentifier>{9775c50d-faf7-488c-be62-1a263c332b04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Cores\UI">
+      <UniqueIdentifier>{b4b74440-cea8-4276-8f35-96ad4bbefbfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Cores\Game">
+      <UniqueIdentifier>{f9c264d9-9ba6-44be-8951-6f4441270ae3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Cores\Entity/Physics">
+      <UniqueIdentifier>{29e3e9a1-1ee8-4af8-b39e-b8d22b3d4cc4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Cores\Scripting">
+      <UniqueIdentifier>{8a1c5f62-471e-4e84-9864-9d1c0898a26e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Cores\Sound">
+      <UniqueIdentifier>{f11abdcc-9994-4218-9238-c20bc41c64e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Cores\AI">
+      <UniqueIdentifier>{38386251-61c3-4369-8a08-cc3da64b503a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Cores\Networking">
+      <UniqueIdentifier>{9b18c440-1e19-4990-ad95-94bb1ec1763d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ResourceManagers">
+      <UniqueIdentifier>{c4d71307-4f2d-4abc-9f9f-f260b6a45812}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DynamicData">
+      <UniqueIdentifier>{e154f554-5564-4066-bc03-ebc80d03d735}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Cores">
+      <UniqueIdentifier>{04d16c1b-8711-4245-b51b-6adada08365c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Cores\Graphics">
+      <UniqueIdentifier>{1153c9b9-e7ff-43d7-9fd4-03cdf5cf3ada}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Cores\UI">
+      <UniqueIdentifier>{cf9747dd-1e43-4227-a454-0d81b2ea4e53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Cores\Game">
+      <UniqueIdentifier>{0397e3c8-7966-4b36-a654-9cb4f78e5ac9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Cores\Entity/Physics">
+      <UniqueIdentifier>{62803fcd-dd62-43ad-bb03-1dc3b47d0d2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Cores\Scripting">
+      <UniqueIdentifier>{85f2d1b6-6510-4453-ae9c-aeef6cd9935c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Cores\Scripting\Scripting Engine">
+      <UniqueIdentifier>{6fd8360c-dabf-47cd-96c3-f9968886487a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Cores\Scripting\Scripting Engine\EventManager">
+      <UniqueIdentifier>{39d0f659-6583-4277-b116-0b998e383c41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Cores\Scripting\Scripting Engine\FunctionManager">
+      <UniqueIdentifier>{e9668a81-e62e-42fa-a2e9-6977a39d8824}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Cores\Scripting\Scripting Engine\NodeFactory">
+      <UniqueIdentifier>{476f37e5-1e3f-4596-8964-cd2ad800de5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Cores\Scripting\Scripting Engine\ObjectManager">
+      <UniqueIdentifier>{15ae42e4-9c15-4764-81ea-85bf2abe8090}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Cores\Scripting\Scripting Engine\ScriptNodes">
+      <UniqueIdentifier>{a5fbf14e-e79f-41dd-9320-6be1ef0f0cb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Cores\Scripting\Scripting Engine\VariableManager">
+      <UniqueIdentifier>{c6d951e5-5a9a-4bc9-9275-72c4fa94afd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Cores\Sound">
+      <UniqueIdentifier>{f24b5a03-81e2-49f0-830e-ac4df989f277}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Cores\AI">
+      <UniqueIdentifier>{359c1e83-9a51-4d42-88ac-c5a4be66a512}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Cores\AI\Non-Movement">
+      <UniqueIdentifier>{ef6fd3d7-20f0-46d0-ba76-9a6e13002d39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Cores\AI\Tools">
+      <UniqueIdentifier>{e8d1fcc4-f832-4ffd-939c-9ef4a98492cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Cores\Networking">
+      <UniqueIdentifier>{e017c1ac-b606-406a-8211-4f239aa8ad90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ResourceManagers">
+      <UniqueIdentifier>{d1515030-11cd-414c-ad8d-59e812d75a7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ResourceManagers\Lists">
+      <UniqueIdentifier>{64237dbe-e79e-466c-8a91-ce1ed2a5d4c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Messages">
+      <UniqueIdentifier>{6f3d9b81-58c6-4a1f-a657-47c3e2120da0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DynamicData">
+      <UniqueIdentifier>{d389b686-63c9-4676-afd3-92dfe7dce5f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Cores\Scripting\Scripting Engine\Debugger">
+      <UniqueIdentifier>{fae191d1-aad7-46f9-a8fe-309fd8e5feda}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseCore.cpp">
+      <Filter>Source Files\Cores</Filter>
+    </ClCompile>
+    <ClCompile Include="CoreManager.cpp">
+      <Filter>Source Files\Cores</Filter>
+    </ClCompile>
+    <ClCompile Include="Display.cpp">
+      <Filter>Source Files\Cores\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicsCore.cpp">
+      <Filter>Source Files\Cores\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>Source Files\Cores\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Picking.cpp">
+      <Filter>Source Files\Cores\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI.cpp">
+      <Filter>Source Files\Cores\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UICore.cpp">
+      <Filter>Source Files\Cores\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UIManager.cpp">
+      <Filter>Source Files\Cores\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="GameCore.cpp">
+      <Filter>Source Files\Cores\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityCore.cpp">
+      <Filter>Source Files\Cores\Entity/Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityManager.cpp">
+      <Filter>Source Files\Cores\Entity/Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Physics.cpp">
+      <Filter>Source Files\Cores\Entity/Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\DXSound.cpp">
+      <Filter>Source Files\Cores\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\DXSoundMgr.cpp">
+      <Filter>Source Files\Cores\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundCore.cpp">
+      <Filter>Source Files\Cores\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\SoundEngine.cpp">
+      <Filter>Source Files\Cores\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound\Waveform.cpp">
+      <Filter>Source Files\Cores\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="AI_Core.cpp">
+      <Filter>Source Files\Cores\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="FuzzyLogic\Module\AIplayer.cpp">
+      <Filter>Source Files\Cores\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Movement\C2DMatrix.cpp">
+      <Filter>Source Files\Cores\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="FuzzyLogic\Module\module.cpp">
+      <Filter>Source Files\Cores\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Movement_Algorithms.cpp">
+      <Filter>Source Files\Cores\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Pathfinding\PathPlanner.cpp">
+      <Filter>Source Files\Cores\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="FuzzyLogic\Variable\Variables.cpp">
+      <Filter>Source Files\Cores\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Pathfinding\Common\2D\Vector2d.cpp">
+      <Filter>Source Files\Cores\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Networking\Client.cpp">
+      <Filter>Source Files\Cores\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="Networking\NetworkingCore.cpp">
+      <Filter>Source Files\Cores\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="Networking\NetworkingEngine.cpp">
+      <Filter>Source Files\Cores\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="Networking\Server.cpp">
+      <Filter>Source Files\Cores\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="Networking\ServerClientBase.cpp">
+      <Filter>Source Files\Cores\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="Networking\Socket.cpp">
+      <Filter>Source Files\Cores\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityPropertyManager.cpp">
+      <Filter>Source Files\ResourceManagers</Filter>
+    </ClCompile>
+    <ClCompile Include="FontManager.cpp">
+      <Filter>Source Files\ResourceManagers</Filter>
+    </ClCompile>
+    <ClCompile Include="StaticMeshManager.cpp">
+      <Filter>Source Files\ResourceManagers</Filter>
+    </ClCompile>
+    <ClCompile Include="SteeringManager.cpp">
+      <Filter>Source Files\ResourceManagers</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureManager.cpp">
+      <Filter>Source Files\ResourceManagers</Filter>
+    </ClCompile>
+    <ClCompile Include="DDScreenTex.cpp">
+      <Filter>Source Files\DynamicData</Filter>
+    </ClCompile>
+    <ClCompile Include="DDScreenText.cpp">
+      <Filter>Source Files\DynamicData</Filter>
+    </ClCompile>
+    <ClCompile Include="DDStaticMesh.cpp">
+      <Filter>Source Files\DynamicData</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptingCore\ScriptingCore.cpp">
+      <Filter>Header Files\Cores\Scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptingCore\ScriptingEngine\ScriptingEngine.cpp">
+      <Filter>Header Files\Cores\Scripting\Scripting Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptingCore\ScriptingEngine\EventManager\EventManager.cpp">
+      <Filter>Header Files\Cores\Scripting\Scripting Engine\EventManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptingCore\ScriptingEngine\FunctionManager\FunctionManager.cpp">
+      <Filter>Header Files\Cores\Scripting\Scripting Engine\FunctionManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptingCore\ScriptingEngine\NodeFactory\NodeFactory.cpp">
+      <Filter>Header Files\Cores\Scripting\Scripting Engine\NodeFactory</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptingCore\ScriptingEngine\ObjectManager\ObjectManager.cpp">
+      <Filter>Header Files\Cores\Scripting\Scripting Engine\ObjectManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptingCore\ScriptingEngine\ScriptNodes\ScriptNodes.cpp">
+      <Filter>Header Files\Cores\Scripting\Scripting Engine\ScriptNodes</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptingCore\ScriptingEngine\VariableManager\VariableManager.cpp">
+      <Filter>Header Files\Cores\Scripting\Scripting Engine\VariableManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptingCore\ScriptingEngine\Debugger\Debug.cpp">
+      <Filter>Header Files\Cores\Scripting\Scripting Engine\Debugger</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceLoader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseCore.h">
+      <Filter>Header Files\Cores</Filter>
+    </ClInclude>
+    <ClInclude Include="CoreList.h">
+      <Filter>Header Files\Cores</Filter>
+    </ClInclude>
+    <ClInclude Include="CoreManager.h">
+      <Filter>Header Files\Cores</Filter>
+    </ClInclude>
+    <ClInclude Include="Display.h">
+      <Filter>Header Files\Cores\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="EScene.h">
+      <Filter>Header Files\Cores\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsCore.h">
+      <Filter>Header Files\Cores\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>Header Files\Cores\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Picking.h">
+      <Filter>Header Files\Cores\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.h">
+      <Filter>Header Files\Cores\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UICore.h">
+      <Filter>Header Files\Cores\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIManager.h">
+      <Filter>Header Files\Cores\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="GameCore.h">
+      <Filter>Header Files\Cores\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState.h">
+      <Filter>Header Files\Cores\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityCore.h">
+      <Filter>Header Files\Cores\Entity/Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityManager.h">
+      <Filter>Header Files\Cores\Entity/Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="EPhysics.h">
+      <Filter>Header Files\Cores\Entity/Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics.h">
+      <Filter>Header Files\Cores\Entity/Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Util.h">
+      <Filter>Header Files\Cores\Entity/Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptingCore\ScriptingCore.h">
+      <Filter>Header Files\Cores\Scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptingCore\ScriptMessages.h">
+      <Filter>Header Files\Cores\Scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptingCore\ScriptingEngine\ScriptingEngine.h">
+      <Filter>Header Files\Cores\Scripting\Scripting Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptingCore\ScriptingEngine\ScriptUtil.h">
+      <Filter>Header Files\Cores\Scripting\Scripting Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptingCore\ScriptingEngine\EventManager\EventManager.h">
+      <Filter>Header Files\Cores\Scripting\Scripting Engine\EventManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptingCore\ScriptingEngine\FunctionManager\FunctionManager.h">
+      <Filter>Header Files\Cores\Scripting\Scripting Engine\FunctionManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptingCore\ScriptingEngine\NodeFactory\NodeFactory.h">
+      <Filter>Header Files\Cores\Scripting\Scripting Engine\NodeFactory</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptingCore\ScriptingEngine\ObjectManager\ObjectManager.h">
+      <Filter>Header Files\Cores\Scripting\Scripting Engine\ObjectManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptingCore\ScriptingEngine\ScriptNodes\BaseNode.h">
+      <Filter>Header Files\Cores\Scripting\Scripting Engine\ScriptNodes</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptingCore\ScriptingEngine\ScriptNodes\ScriptNodes.h">
+      <Filter>Header Files\Cores\Scripting\Scripting Engine\ScriptNodes</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptingCore\ScriptingEngine\VariableManager\VariableManager.h">
+      <Filter>Header Files\Cores\Scripting\Scripting Engine\VariableManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound\DXSound.h">
+      <Filter>Header Files\Cores\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound\DXSoundMgr.h">
+      <Filter>Header Files\Cores\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundCore.h">
+      <Filter>Header Files\Cores\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound\SoundEngine.h">
+      <Filter>Header Files\Cores\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound\Waveform.h">
+      <Filter>Header Files\Cores\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="AI_CORE.h">
+      <Filter>Header Files\Cores\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Movement\CMovement_Algorithms.h">
+      <Filter>Header Files\Cores\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="FuzzyLogic\Module\AIplayer.h">
+      <Filter>Header Files\Cores\AI\Non-Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="Pathfinding\Common\Graph\AStarHeuristicPolicies.h">
+      <Filter>Header Files\Cores\AI\Non-Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="Pathfinding\Common\Graph\GraphAlgorithms.h">
+      <Filter>Header Files\Cores\AI\Non-Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="Pathfinding\Common\Graph\GraphEdgeTypes.h">
+      <Filter>Header Files\Cores\AI\Non-Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="Pathfinding\Common\Graph\GraphNodeTypes.h">
+      <Filter>Header Files\Cores\AI\Non-Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="Pathfinding\Common\Graph\HandyGraphFunctions.h">
+      <Filter>Header Files\Cores\AI\Non-Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="Pathfinding\Common\2D\InvertedAABBox2D.h">
+      <Filter>Header Files\Cores\AI\Non-Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="FuzzyLogic\Module\module.h">
+      <Filter>Header Files\Cores\AI\Non-Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="Pathfinding\Common\Graph\NodeTypeEnumerations.h">
+      <Filter>Header Files\Cores\AI\Non-Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="Pathfinding\PathPlanner.h">
+      <Filter>Header Files\Cores\AI\Non-Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="Pathfinding\Common\misc\PriorityQueue.h">
+      <Filter>Header Files\Cores\AI\Non-Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="FuzzyLogic\Sets\ProxySet.h">
+      <Filter>Header Files\Cores\AI\Non-Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="Pathfinding\resource.h">
+      <Filter>Header Files\Cores\AI\Non-Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="FuzzyLogic\Rule,Term\rules.h">
+      <Filter>Header Files\Cores\AI\Non-Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="FuzzyLogic\Sets\Set_LeftShoulder.h">
+      <Filter>Header Files\Cores\AI\Non-Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="FuzzyLogic\Sets\Set_RightShoulder.h">
+      <Filter>Header Files\Cores\AI\Non-Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="FuzzyLogic\Sets\set_singleton.h">
+      <Filter>Header Files\Cores\AI\Non-Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="FuzzyLogic\Sets\Set_Triangle.h">
+      <Filter>Header Files\Cores\AI\Non-Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="FuzzyLogic\Sets\Sets.h">
+      <Filter>Header Files\Cores\AI\Non-Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="Pathfinding\Common\Graph\SparseGraph.h">
+      <Filter>Header Files\Cores\AI\Non-Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="Pathfinding\Common\misc\Stream_Utility_Functions.h">
+      <Filter>Header Files\Cores\AI\Non-Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="FuzzyLogic\Rule,Term\Terms.h">
+      <Filter>Header Files\Cores\AI\Non-Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="Pathfinding\Common\misc\TypeToString.h">
+      <Filter>Header Files\Cores\AI\Non-Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="FuzzyLogic\Variable\Variables.h">
+      <Filter>Header Files\Cores\AI\Non-Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="Movement\c2dmatrix.h">
+      <Filter>Header Files\Cores\AI\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Pathfinding\Common\2D\C2DMatrix.h">
+      <Filter>Header Files\Cores\AI\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Pathfinding\constants.h">
+      <Filter>Header Files\Cores\AI\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Pathfinding\Common\2D\geometry.h">
+      <Filter>Header Files\Cores\AI\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Movement\SVector3D.h">
+      <Filter>Header Files\Cores\AI\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Pathfinding\Common\2D\Transformations.h">
+      <Filter>Header Files\Cores\AI\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Movement\Transformations.h">
+      <Filter>Header Files\Cores\AI\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Pathfinding\Common\2D\Vector2D.h">
+      <Filter>Header Files\Cores\AI\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Pathfinding\Common\2D\Wall2D.h">
+      <Filter>Header Files\Cores\AI\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Networking\Client.h">
+      <Filter>Header Files\Cores\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="Networking\NetworkingCore.h">
+      <Filter>Header Files\Cores\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="Networking\NetworkingEngine.h">
+      <Filter>Header Files\Cores\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="Networking\PacketPresets.h">
+      <Filter>Header Files\Cores\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="Networking\Server.h">
+      <Filter>Header Files\Cores\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="Networking\ServerClientBase.h">
+      <Filter>Header Files\Cores\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="Networking\Socket.h">
+      <Filter>Header Files\Cores\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="Networking\TimerTool.h">
+      <Filter>Header Files\Cores\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityPropertyManager.h">
+      <Filter>Header Files\ResourceManagers</Filter>
+    </ClInclude>
+    <ClInclude Include="FontManager.h">
+      <Filter>Header Files\ResourceManagers</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>Header Files\ResourceManagers</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticMeshManager.h">
+      <Filter>Header Files\ResourceManagers</Filter>
+    </ClInclude>
+    <ClInclude Include="SteeringManager.h">
+      <Filter>Header Files\ResourceManagers</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureManager.h">
+      <Filter>Header Files\ResourceManagers</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityPropertyList.h">
+      <Filter>Header Files\ResourceManagers\Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="FontList.h">
+      <Filter>Header Files\ResourceManagers\Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="StaticMeshList.h">
+      <Filter>Header Files\ResourceManagers\Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="SteeringList.h">
+      <Filter>Header Files\ResourceManagers\Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureList.h">
+      <Filter>Header Files\ResourceManagers\Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="UIList.h">
+      <Filter>Header Files\ResourceManagers\Lists</Filter>
+    </ClInclude>
+    <ClInclude Include="AI_Message.h">
+      <Filter>Header Files\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityMessage.h">
+      <Filter>Header Files\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="GameMessage.h">
+      <Filter>Header Files\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsMessage.h">
+      <Filter>Header Files\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="Message.h">
+      <Filter>Header Files\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="Networking\NetCoreMessage.h">
+      <Filter>Header Files\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundMessage.h">
+      <Filter>Header Files\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemMessage.h">
+      <Filter>Header Files\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="UIMessage.h">
+      <Filter>Header Files\Messages</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseManager.h">
+      <Filter>Header Files\DynamicData</Filter>
+    </ClInclude>
+    <ClInclude Include="DDCamera.h">
+      <Filter>Header Files\DynamicData</Filter>
+    </ClInclude>
+    <ClInclude Include="DDPicking.h">
+      <Filter>Header Files\DynamicData</Filter>
+    </ClInclude>
+    <ClInclude Include="DDPositions.h">
+      <Filter>Header Files\DynamicData</Filter>
+    </ClInclude>
+    <ClInclude Include="DDScreenTex.h">
+      <Filter>Header Files\DynamicData</Filter>
+    </ClInclude>
+    <ClInclude Include="DDScreenText.h">
+      <Filter>Header Files\DynamicData</Filter>
+    </ClInclude>
+    <ClInclude Include="DDScriptData.h">
+      <Filter>Header Files\DynamicData</Filter>
+    </ClInclude>
+    <ClInclude Include="DDStaticMesh.h">
+      <Filter>Header Files\DynamicData</Filter>
+    </ClInclude>
+    <ClInclude Include="DD_AIData\DDSteering.h">
+      <Filter>Header Files\DynamicData</Filter>
+    </ClInclude>
+    <ClInclude Include="DD_AIData\ddsteeringobstacles.h">
+      <Filter>Header Files\DynamicData</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicData.h">
+      <Filter>Header Files\DynamicData</Filter>
+    </ClInclude>
+    <ClInclude Include="ScriptingCore\ScriptingEngine\Debugger\Debug.h">
+      <Filter>Header Files\Cores\Scripting\Scripting Engine\Debugger</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicsMat.h">
+      <Filter>Header Files\Cores\Entity/Physics</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,4 @@
+script
+
+	PlaySound( 4, 0 );
+endscript
