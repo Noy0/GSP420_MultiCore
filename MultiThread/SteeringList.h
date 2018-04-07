@@ -6,7 +6,9 @@ enum ESteeringType
 	ST_NONE,
 	ST_WANDER,
 	ST_ARRIVE,
-	ST_HIDE
+	ST_HIDE,
+	ST_SEEK,
+	ST_FLEE
 };
 
 #endif

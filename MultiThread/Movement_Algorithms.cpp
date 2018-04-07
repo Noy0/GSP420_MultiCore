@@ -88,12 +88,17 @@ vector<pair<int,SVector3D>> CMovement_Algorithms::Update(vector<SteeringData> En
 
 	m_vFinalSteering.resize(Entity.size());
 	//this loop is determining the current entity that is being checked against all other entities
-	//for(unsigned int i = 0; i < m_vEntityData.size(); i++)
+	//for(unsigned int i = 0; i < m_vEntityData.size(); i++)                                                //   tried something different 
 	for(unsigned int i = 0; i < Entity.size(); i++)
 	{
 		m_iFlags = 0;
+
+		
+
 		 // set flags to determine what the entity is doing.
 		SetAlgorithms(Entity[i].m_iSteeringFlags);
+
+
 
 		m_dDBoxLength = Entity[i].m_iMinDetectionBoxLength;
 		m_vAvoidObst.clear(); //empty previous entity vector of all obstacles.
@@ -113,6 +118,8 @@ vector<pair<int,SVector3D>> CMovement_Algorithms::Update(vector<SteeringData> En
 
 		m_vFinalSteering[i].first = Entity[i].ID;
 		m_vFinalSteering[i].second = SSteeringForce;
+
+		
 	}
 
     return m_vFinalSteering;
@@ -157,17 +164,73 @@ D3DXVECTOR3 CMovement_Algorithms::AriveTemp(D3DXVECTOR3 CurPos, D3DXVECTOR3 Targ
 
 void CMovement_Algorithms::SetAlgorithms(int Flags)
 {
-	if(Flags == 0)
+	int id = 0;
+	int pursuingType = 0;
+
+
+
+
+	if (Flags == 0)
 		WanderOff();
-	if(Flags == 1)
+		
+	if (Flags == 1)
 		WanderOn();
-	if(Flags == 2)
+		
+   	if(Flags == 2)
 	{
 		ArriveOn();
-		//STarget = TargetPos;
+		for (int i = 0; i < m_vEntityData.size(); i++)
+		{
+			if (i == 0)
+			{
+				id = m_vEntityData[i].ID;
+				pursuingType = m_vEntityData[i].m_iEntityType;
+				continue;
+			}
+			m_vEntityData[i].m_iPursuitID = id;
+			m_vEntityData[i].m_iPursuingType = pursuingType;
+		}
+
 	}
-	if(Flags == 3)
-		HideOn();
+		if (Flags == 3)
+			HideOn();
+	
+
+
+		if (Flags == 4)
+		{
+			SeekOn();
+			for (int i = 0; i < m_vEntityData.size(); i++)
+			{
+				if (i == 5)
+				{
+					id = m_vEntityData[i].ID;
+					pursuingType = m_vEntityData[i].m_iEntityType;
+					continue;
+				}
+				m_vEntityData[i].m_iPursuitID = id;
+				m_vEntityData[i].m_iPursuingType = pursuingType;
+			}
+		}
+
+
+	if (Flags == 5)
+	{
+		FleeOn();
+		for (int i = 0; i < m_vEntityData.size(); i++)
+		{
+			if (i != 5)
+			{
+				id = m_vEntityData[i].ID;
+				pursuingType = m_vEntityData[i].m_iEntityType;
+				continue;
+			}
+			m_vEntityData[i].m_iPursuitID = id;
+			m_vEntityData[i].m_iPursuingType = pursuingType;
+		}
+	}
+
+
 
 	m_iFlags;
 }
@@ -176,7 +239,7 @@ void CMovement_Algorithms::SetEntitiesPursuing()
 {
 	for(unsigned int i = 0; i < m_vEntityData.size(); i++) //loop through all entities
 	{
-		//m_iFlags = m_vEntityData[i].m_iSteeringFlags;
+		//m_iFlags = m_vEntityData[i].m_iSteeringFlags;                                                //changed this to try to get to seek
 		if(On(pursuit))
 			m_vPursuers[i] = m_vEntityData[i]; //fill vector of entities that are pursuing
 	}
@@ -185,7 +248,7 @@ void CMovement_Algorithms::SetEntitiesFlocking()
 {
 	for(unsigned int i = 0; i < m_vEntityData.size(); i++) //loop through all entities
 	{
-		//m_iFlags = m_vEntityData[i].m_iSteeringFlags;
+		//m_iFlags = m_vEntityData[i].m_iSteeringFlags;                                               // changed this to try to get moving together
 		if(On(flock))
 			m_vFlockers[i] = m_vEntityData[i]; //fill vector of entities that are flocking
 	}
@@ -222,9 +285,9 @@ SVector3D CMovement_Algorithms::Calculate(SteeringData Entity)
 	}
 
 
-	if (On(flee))
+	if (On(flee))                                                                                /// place to start changing 
 	{
-		force = Flee(SPersuer) * m_dWeightFlee; 
+		force = Flee(SPursuer) * m_dWeightFlee; 
 
 		if (!AccumulateForce(SSteeringForce, force)) return SSteeringForce;
 	}
@@ -255,7 +318,7 @@ SVector3D CMovement_Algorithms::Calculate(SteeringData Entity)
 		if (!AccumulateForce(SSteeringForce, force)) return SSteeringForce;
 	}
 
-	if (On(seek))
+	if (On(seek))                                                                            // will also have to be changed
 	{
 		force = Seek(STarget) * m_dWeightSeek;
 
@@ -410,11 +473,11 @@ SVector3D CMovement_Algorithms::Flee(SVector3D TargetPos)
 
  //only flee if the target is within 'panic distance'. Work in distance
   //squared space.
-//const double PanicDistanceSq = 100.0f * 100.0;
-//  if (Vec2DDistanceSq(SCurEntity.SPosition, TargetPos) > PanicDistanceSq)
-//  {
-//    return SVector3D(0,0);
-//  }
+const double PanicDistanceSq = 100.0f * 100.0;                                             //uncommented to try to add flee
+  if (Vec2DDistanceSq(SCurEntity.SPosition, TargetPos) > PanicDistanceSq)                  // uncommented to try to add flee
+  {                                                                                        // uncommented to try to add flee
+   return SVector3D(0,0);                                                                  // uncommented to try to add flee 
+  }                                                                                        // uncommented to try to add flee
   
   //only flee if the target is within 'panic distance'. Work in distance
   //squared space.

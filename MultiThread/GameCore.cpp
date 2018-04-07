@@ -309,13 +309,25 @@ void GameCore::SingleUpdate(float dt)
 				if(m_PositionIn)
 				{
 					m_PositionIn->Copy(tempPos);
-					for(int i = 0; i < tempPos.size(); ++i)
+					for (int i = 0; i < tempPos.size(); ++i)
 					{
-						int j = tempPos[i].ID;
-						if(tempPos[i].Type == EP_SMALLMARBLE || tempPos[i].Type == EP_MEDIUMMARBLE ||
-							tempPos[i].Type == EP_LARGEMARBLE)
+						if (tempPos[i].Type == EP_SMALLMARBLE || tempPos[i].Type == EP_MEDIUMMARBLE ||
+							tempPos[i].Type == EP_LARGEMARBLE )
+									
+					
 						{
-							gCoreMgr->HandleMessage(new SMessageSetSteering(&(tempPos[i].ID), 1));
+						
+							if (tempPos[i].Type == EP_SMALLMARBLE) {
+								gCoreMgr->HandleMessage(new SMessageSetSteering(&(tempPos[i].ID), 1));
+							}
+							else if (tempPos[i].Type == EP_MEDIUMMARBLE) {
+								gCoreMgr->HandleMessage(new SMessageSetSteering(&(tempPos[i].ID), 4));
+							}
+							else 
+								gCoreMgr->HandleMessage(new SMessageSetSteering(&(tempPos[i].ID), 5));
+								
+
+							
 							++m_PlayerScore[m_Turn];
 						}
 					}
@@ -337,12 +349,22 @@ void GameCore::SingleUpdate(float dt)
 				if(m_PositionIn)
 				{
 					m_PositionIn->Copy(tempPos);
-					for(int i = 0; i < tempPos.size(); ++i)
+					for (int i = 0; i < tempPos.size(); ++i)
 					{
-						if(tempPos[i].Type == EP_SMALLMARBLE || tempPos[i].Type == EP_MEDIUMMARBLE ||
-							tempPos[i].Type == EP_LARGEMARBLE)
+						if (tempPos[i].Type == EP_SMALLMARBLE || tempPos[i].Type == EP_MEDIUMMARBLE ||
+							tempPos[i].Type == EP_LARGEMARBLE )
 						{
-							gCoreMgr->HandleMessage(new SMessageSetSteering(&(tempPos[i].ID), 0));
+							
+							if (tempPos[i].Type == EP_SMALLMARBLE) {
+							gCoreMgr->HandleMessage(new SMessageSetSteering(&(tempPos[i].ID), 1));
+							}
+							else if (tempPos[i].Type == EP_MEDIUMMARBLE) {
+							gCoreMgr->HandleMessage(new SMessageSetSteering(&(tempPos[i].ID), 4));
+							}
+							else
+							gCoreMgr->HandleMessage(new SMessageSetSteering(&(tempPos[i].ID), 5));
+						
+							
 							++m_PlayerScore[m_Turn];
 						}
 					}

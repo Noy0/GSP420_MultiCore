@@ -14,6 +14,7 @@
 #include "UIList.h"
 
 // Modified by TP (to enable PhysicsMats, and to add new shapes for new physics models)
+// & integrated changes from AI team
 
 void ResourceLoader::Load()
 {
@@ -270,5 +271,25 @@ void ResourceLoader::Load()
 		sc.m_iMinDetectionBoxLength = 40;
 		sc.m_iSteeringFlags = 3;
 		gSCMgr->AddItem(ST_HIDE, new SteeringConstants(sc));
+
+		//seek
+		sc.m_dMaxForce = 15;
+		sc.m_dMaxSpeed = 15;
+		sc.m_dRadius = 10;
+		sc.m_dScale = 5;
+		sc.m_iEntityType = 4;
+		sc.m_iMinDetectionBoxLength = 40;
+		sc.m_iSteeringFlags = 4;
+		gSCMgr->AddItem(ST_SEEK, new SteeringConstants(sc));
+
+		//flee
+		sc.m_dMaxForce = 15;
+		sc.m_dMaxSpeed = 15;
+		sc.m_dRadius = 10;
+		sc.m_dScale = 5;
+		sc.m_iEntityType = 5;
+		sc.m_iMinDetectionBoxLength = 40;
+		sc.m_iSteeringFlags = 5;
+		gSCMgr->AddItem(ST_FLEE, new SteeringConstants(sc));
 	}
 }
