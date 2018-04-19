@@ -453,6 +453,22 @@ void EntityCore::EntityMgrMsg()
 				delete p_msg;
 				break;
 			}
+
+		case MSG_COLLISIONHOOK:
+			{
+				SMessageSetCollisionHook* msgx = (SMessageSetCollisionHook*)p_msg;
+				int eID = *(msgx->ID);
+				EntityData* p_entity = m_EntityMgr.GetEntity(eID);
+
+				p_entity->setCollisionHook(msgx->Action);
+
+				if (p_entity->physicsID > -1)
+					m_Physics.EnableCallback(p_entity->physicsID, msgx->Action != nullptr);
+
+				delete p_msg;
+				break;
+			}
+
 		default:
 			{
 				tempQueue.push(p_msg);

@@ -5,6 +5,7 @@
 #include <d3dx9.h>
 #include <List>
 #include "PhysicsMat.h"
+#include "btBulletDynamicsCommon.h"
 
 //Heavily Edited done by - TP  (to fix seriously crappy implemntation of a list manager)
 
@@ -85,6 +86,8 @@ public:
 	void applyAngularVelocity(D3DXVECTOR3 deltaAngularVelocity);
 	void applyImpulseRotation(D3DXVECTOR3 deltaAngularMomentum);
 	void applyTorque(D3DXVECTOR3 deltaTorque);
+
+	void setCollisionHook(ContactProcessedCallback action);
 
 	//end additions -DN TP
 

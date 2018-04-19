@@ -205,6 +205,13 @@ D3DXMATRIX* EntityData::getInvTensorMatrix(D3DXVECTOR3 inertiaTensor)
 }
 
 
+
+void EntityData::setCollisionHook(ContactProcessedCallback action)
+{
+	//PersistentManifold.ContactProcessed += action;
+}
+
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 

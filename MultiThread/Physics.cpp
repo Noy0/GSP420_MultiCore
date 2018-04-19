@@ -606,6 +606,25 @@ void PhysicsWorld::ApplyTorque(int id, D3DXVECTOR3& torque)
 
 
 
+void PhysicsWorld::EnableCallback(int id, bool enable)
+{
+	btCollisionObject* p_obj = p_dynamicsWorld->getCollisionObjectArray()[id];
+	btRigidBody* p_body = btRigidBody::upcast(p_obj);
+	if (p_body && p_body->getMotionState())
+	{
+		int flagBase = p_body->getCollisionFlags();
+		int flagTarget = btCollisionObject::CollisionFlags::CF_CUSTOM_MATERIAL_CALLBACK;
+		if(enable)
+			flagBase |= flagTarget;
+		else
+			flagBase &= ~flagTarget;
+		p_body->setCollisionFlags(flagBase);
+	}
+}
+
+
+
+
 btVector3 PhysicsWorld::ConvertToBtVec(const D3DXVECTOR3& c_old)
 {
 	btVector3 newVec(c_old.x, c_old.y, c_old.z);

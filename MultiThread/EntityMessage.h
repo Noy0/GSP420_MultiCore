@@ -35,7 +35,8 @@ enum EEntityMessage
 	MSG_ADDTORQUE,
 	MSG_INCSCRIPTFLAG1,
 	MSG_INCSCRIPTFLAG2,
-	MSG_SETSTEERING
+	MSG_SETSTEERING,
+	MSG_COLLISIONHOOK
 };
 
 struct SMessageAddEntity : SMessage
@@ -264,5 +265,14 @@ struct SMessageSetSteering : public SMessage
 	int *ID;
 	int SteeringType;
 };
+
+struct SMessageSetCollisionHook : public SMessage
+{
+	SMessageSetCollisionHook(int *id, ContactProcessedCallback action) : SMessage(CORE_ENTITY, MSG_COLLISIONHOOK),
+		ID(id), Action(action) {}
+	int *ID;
+	ContactProcessedCallback Action;
+};
+
 
 #endif
