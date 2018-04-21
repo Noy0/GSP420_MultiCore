@@ -328,7 +328,7 @@ void GameCore::SingleUpdate(float dt)
 								
 
 							
-							++m_PlayerScore[m_Turn];
+							//++m_PlayerScore[m_Turn];
 						}
 					}
 				}
@@ -392,12 +392,13 @@ void GameCore::SingleUpdate(float dt)
 				m_PositionIn->Copy(tempPos);
 				for(int i = 0; i < tempPos.size(); ++i)
 				{
-					if((tempPos[i].Type == EP_SMALLMARBLE || tempPos[i].Type == EP_MEDIUMMARBLE ||
-						tempPos[i].Type == EP_LARGEMARBLE || tempPos[i].Type == EP_PLAYERMARBLE) 
+					if ((tempPos[i].Type == EP_SMALLMARBLE || tempPos[i].Type == EP_MEDIUMMARBLE ||
+						tempPos[i].Type == EP_LARGEMARBLE || tempPos[i].Type == EP_PLAYERMARBLE)
 						&& tempPos[i].Position.y < -20.0f)
 					{
 						gCoreMgr->HandleMessage(new SMessageRemoveEntity(&(tempPos[i].ID)));
-						++m_PlayerScore[m_Turn];
+
+						m_PlayerScore[m_Turn] += 10;
 					}
 				}
 			}
