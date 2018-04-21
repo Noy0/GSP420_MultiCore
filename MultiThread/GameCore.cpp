@@ -414,7 +414,7 @@ void GameCore::SingleUpdate(float dt)
 	char num[40];
 	DD_ScreenTextData temp;
 	//==============Player's score==================
-	sprintf( num, "PLAYER SCORE: %i", m_PlayerScore[m_Turn]);
+	sprintf( num, "PLAYER SCORE: %i", m_PlayerScore[m_Turn]); 
 	D3DXMATRIX m;
 	D3DXMatrixTranslation(&m, 0, 0, 0);
 	temp.FontID = FONT_CHAT;
