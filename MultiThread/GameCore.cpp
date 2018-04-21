@@ -408,7 +408,7 @@ void GameCore::SingleUpdate(float dt)
 					if ((tempPos[i].Type == EP_SMALLMARBLE || tempPos[i].Type == EP_MEDIUMMARBLE ||
 						tempPos[i].Type == EP_LARGEMARBLE))
 					{
-						ballCount += 0;
+						ballCount += 1;
 					}
 				}
 				if (ballCount == 0)
