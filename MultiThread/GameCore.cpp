@@ -426,16 +426,30 @@ void GameCore::SingleUpdate(float dt)
 		}
 	case SGS_GAMEOVER:
 		{
-			if(m_PlayerScore[0] < m_PlayerScore[1])
-				gCoreMgr->HandleMessage(new SMessageRunScript("shoot.txt"));
+		m_TextOutBuffer.clear();
+		char num[40];
+		DD_ScreenTextData temp;
+			if(m_PlayerScore[1] < m_PlayerScore[2])
+				sprintf(num, "\n YOU LOSE", m_PlayerScore[m_Turn]);			
 			else
-				gCoreMgr->HandleMessage(new SMessageRunScript("shoot.txt"));
+				sprintf(num, "\n you win", m_PlayerScore[m_Turn]);
+			D3DXMATRIX m;
+			D3DXMatrixTranslation(&m, 0, 0, 0);
+			temp.FontID = FONT_CHAT;
+			temp.Text = num;
+			temp.Transform = m;
+			temp.Color = D3DXCOLOR(0, 0, 0, 1);
+			m_TextOutBuffer.push_back(temp);
 		}
 	}
-	m_TextOutBuffer.clear();
+	//m_TextOutBuffer.clear();
 	char num[40];
 	DD_ScreenTextData temp;
 	//==============Player's score==================
+	/*if (m_PlayerScore[0] > m_PlayerScore[1] && m_SubState == SGS_GAMEOVER)
+	{
+
+	}*/
 	sprintf( num, "PLAYER SCORE: %i", m_PlayerScore[m_Turn]);
 	D3DXMATRIX m;
 	D3DXMatrixTranslation(&m, 0, 0, 0);
