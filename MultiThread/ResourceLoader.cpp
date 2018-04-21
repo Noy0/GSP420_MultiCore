@@ -284,8 +284,8 @@ void ResourceLoader::Load()
 
 		//flee
 		sc.m_dMaxForce = 15;
-		sc.m_dMaxSpeed = 15;
-		sc.m_dRadius = 10;
+		sc.m_dMaxSpeed = 2;
+		sc.m_dRadius = 5;
 		sc.m_dScale = 5;
 		sc.m_iEntityType = 5;
 		sc.m_iMinDetectionBoxLength = 40;

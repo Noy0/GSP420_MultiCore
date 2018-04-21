@@ -67,8 +67,9 @@ void EntityCore::EntityMgrMsg()
 				p_entity->setPosition(p_msgx->Position);
 
 				//default value set to wander for the marbles
-				p_entity->setSteeringType(1);
+				p_entity->setSteeringType(0);
 
+				
 				if(p_newEPD->mat != nullptr)
 					p_entity->setPhysicsMat(p_newEPD->mat);
 

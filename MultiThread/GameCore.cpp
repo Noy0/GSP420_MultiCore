@@ -22,6 +22,7 @@ GameCore::GameCore()
 	m_Hosting = false;
 	m_GameState = 0;
 	m_SubState = SGS_SHOOTING;
+	
 }
 
 GameCore::~GameCore()
@@ -318,13 +319,13 @@ void GameCore::SingleUpdate(float dt)
 						{
 						
 							if (tempPos[i].Type == EP_SMALLMARBLE) {
-								gCoreMgr->HandleMessage(new SMessageSetSteering(&(tempPos[i].ID), 0));
+								gCoreMgr->HandleMessage(new SMessageSetSteering(&(tempPos[i].ID), 1));
 							}
 							else if (tempPos[i].Type == EP_MEDIUMMARBLE) {
-								gCoreMgr->HandleMessage(new SMessageSetSteering(&(tempPos[i].ID), 0));
+								gCoreMgr->HandleMessage(new SMessageSetSteering(&(tempPos[i].ID), 1));
 							}
 							else 
-								gCoreMgr->HandleMessage(new SMessageSetSteering(&(tempPos[i].ID), 0));
+								gCoreMgr->HandleMessage(new SMessageSetSteering(&(tempPos[i].ID), 1));
 								
 
 							
@@ -356,13 +357,13 @@ void GameCore::SingleUpdate(float dt)
 						{
 							
 							if (tempPos[i].Type == EP_SMALLMARBLE) {
-							gCoreMgr->HandleMessage(new SMessageSetSteering(&(tempPos[i].ID), 4));
+							gCoreMgr->HandleMessage(new SMessageSetSteering(&(tempPos[i].ID), 5));
 							}
 							else if (tempPos[i].Type == EP_MEDIUMMARBLE) {
-							gCoreMgr->HandleMessage(new SMessageSetSteering(&(tempPos[i].ID), 4));
+							gCoreMgr->HandleMessage(new SMessageSetSteering(&(tempPos[i].ID), 5));
 							}
 							else
-							gCoreMgr->HandleMessage(new SMessageSetSteering(&(tempPos[i].ID), 4));
+							gCoreMgr->HandleMessage(new SMessageSetSteering(&(tempPos[i].ID), 5));
 						
 							
 							++m_PlayerScore[m_Turn];
@@ -401,18 +402,21 @@ void GameCore::SingleUpdate(float dt)
 						m_PlayerScore[m_Turn] += 10;
 					}
 				}
-				int ballCount{ 0 };
+
+				m_BallCount = 0;
+				//int ballCount{ 0 };
 				for (int i = 0; i < tempPos.size(); ++i)
 				{
 					
 					if ((tempPos[i].Type == EP_SMALLMARBLE || tempPos[i].Type == EP_MEDIUMMARBLE ||
 						tempPos[i].Type == EP_LARGEMARBLE))
 					{
-						ballCount += 1;
+						m_BallCount += 1;
 					}
 				}
-				if (ballCount == 0)
+				if (m_BallCount == 0)
 				{
+					m_GameOver = true;
 					m_SubState = SGS_GAMEOVER;
 					break;
 				}
@@ -426,31 +430,21 @@ void GameCore::SingleUpdate(float dt)
 		}
 	case SGS_GAMEOVER:
 		{
-		m_TextOutBuffer.clear();
-		char num[40];
-		DD_ScreenTextData temp;
-			if(m_PlayerScore[1] < m_PlayerScore[2])
-				sprintf(num, "\n YOU LOSE", m_PlayerScore[m_Turn]);			
-			else
-				sprintf(num, "\n you win", m_PlayerScore[m_Turn]);
-			D3DXMATRIX m;
-			D3DXMatrixTranslation(&m, 0, 0, 0);
-			temp.FontID = FONT_CHAT;
-			temp.Text = num;
-			temp.Transform = m;
-			temp.Color = D3DXCOLOR(0, 0, 0, 1);
-			m_TextOutBuffer.push_back(temp);
+		m_Quit = true;
 		}
 	}
 	m_TextOutBuffer.clear();
 	char num[40];
 	DD_ScreenTextData temp;
 	//==============Player's score==================
-	/*if (m_PlayerScore[0] > m_PlayerScore[1] && m_SubState == SGS_GAMEOVER)
-	{
+	sprintf(num, "PLAYER SCORE: %i", m_PlayerScore[m_Turn]); 
+	if ((m_PlayerScore[1] > m_PlayerScore[2]) && (m_BallCount == 0) && m_GameOver == true) { 
+		sprintf(num, "PLAYER SCORE: %i \nYou Win", m_PlayerScore[1]);
+	} 
+	if ((m_PlayerScore[2] > m_PlayerScore[1]) && (m_BallCount == 0) && m_GameOver == true) {
+		sprintf(num, "PLAYER SCORE: %i \nYou Lose", m_PlayerScore[1]); 
+	}
 
-	}*/
-	sprintf( num, "PLAYER SCORE: %i", m_PlayerScore[m_Turn]);
 	D3DXMATRIX m;
 	D3DXMatrixTranslation(&m, 0, 0, 0);
 	temp.FontID = FONT_CHAT;
@@ -469,6 +463,7 @@ void GameCore::SingleUpdate(float dt)
 	m_TextOutBuffer.push_back(temp);
 	//==============================================
 	//Power Bar
+
 }
 
 void GameCore::HostingUpdate(float dt)

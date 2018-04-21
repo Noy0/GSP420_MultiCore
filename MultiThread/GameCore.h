@@ -58,6 +58,8 @@ private:
 
 	int m_PlayerScore[4];
 	int m_Turn;
+	int m_BallCount;
+	bool m_GameOver = false;
 
 	DD_ScreenTextData mPlayerData;
 
