@@ -78,6 +78,11 @@ D3DXVECTOR3 EntityData::getTorque()
 	return this->torque;
 }
 
+int EntityData::getSteeringType()
+{
+	return this->steeringType;
+}
+
 
 
 void EntityData::setPhysicsMat(PhysicsMat* mat)  
@@ -138,6 +143,11 @@ void EntityData::setAngularVelocity(D3DXVECTOR3 angularVelocity)
 void EntityData::setTorque(D3DXVECTOR3 torque)
 {
 	this->torque = torque;
+}
+
+void EntityData::setSteeringType(int steering)
+{
+	this->steeringType = steering;
 }
 
 

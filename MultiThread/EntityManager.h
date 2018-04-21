@@ -60,6 +60,8 @@ public:
 	D3DXVECTOR3 getAngularAcceleration();
 	D3DXVECTOR3 getAngularMomentum();
 	D3DXVECTOR3 getTorque();
+	
+	int getSteeringType();
 
 	void setPhysicsMat(PhysicsMat* mat);
 	void setIsKinematic(TypePhysics mode);
@@ -75,6 +77,7 @@ public:
 	void setAngularVelocity(D3DXVECTOR3 angularVelocity);
 	void setTorque(D3DXVECTOR3 torque);
 
+	void setSteeringType(int steeringType);
 
 	void translate(D3DXVECTOR3 translation);
 	void accelerate(D3DXVECTOR3 deltaVelocity);
