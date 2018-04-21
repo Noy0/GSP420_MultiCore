@@ -318,13 +318,13 @@ void GameCore::SingleUpdate(float dt)
 						{
 						
 							if (tempPos[i].Type == EP_SMALLMARBLE) {
-								gCoreMgr->HandleMessage(new SMessageSetSteering(&(tempPos[i].ID), 1));
+								gCoreMgr->HandleMessage(new SMessageSetSteering(&(tempPos[i].ID), 0));
 							}
 							else if (tempPos[i].Type == EP_MEDIUMMARBLE) {
-								gCoreMgr->HandleMessage(new SMessageSetSteering(&(tempPos[i].ID), 4));
+								gCoreMgr->HandleMessage(new SMessageSetSteering(&(tempPos[i].ID), 0));
 							}
 							else 
-								gCoreMgr->HandleMessage(new SMessageSetSteering(&(tempPos[i].ID), 5));
+								gCoreMgr->HandleMessage(new SMessageSetSteering(&(tempPos[i].ID), 0));
 								
 
 							
@@ -356,13 +356,13 @@ void GameCore::SingleUpdate(float dt)
 						{
 							
 							if (tempPos[i].Type == EP_SMALLMARBLE) {
-							gCoreMgr->HandleMessage(new SMessageSetSteering(&(tempPos[i].ID), 1));
+							gCoreMgr->HandleMessage(new SMessageSetSteering(&(tempPos[i].ID), 4));
 							}
 							else if (tempPos[i].Type == EP_MEDIUMMARBLE) {
 							gCoreMgr->HandleMessage(new SMessageSetSteering(&(tempPos[i].ID), 4));
 							}
 							else
-							gCoreMgr->HandleMessage(new SMessageSetSteering(&(tempPos[i].ID), 5));
+							gCoreMgr->HandleMessage(new SMessageSetSteering(&(tempPos[i].ID), 4));
 						
 							
 							++m_PlayerScore[m_Turn];
@@ -413,7 +413,7 @@ void GameCore::SingleUpdate(float dt)
 	char num[40];
 	DD_ScreenTextData temp;
 	//==============Player's score==================
-	sprintf( num, "PLAYER SCORE: %i", m_PlayerScore[0]);
+	sprintf( num, "PLAYER SCORE: %i", m_PlayerScore[m_Turn]);
 	D3DXMATRIX m;
 	D3DXMatrixTranslation(&m, 0, 0, 0);
 	temp.FontID = FONT_CHAT;
@@ -549,7 +549,7 @@ void GameCore::HostingUpdate(float dt)
 	char num[40];
 	DD_ScreenTextData temp;
 	//==============Player's score==================
-	sprintf( num, "PLAYER SCORE: %i", m_PlayerScore[0]);
+	sprintf( num, "PLAYER SCORE: %i", m_PlayerScore[m_Turn]);
 	D3DXMATRIX m;
 	D3DXMatrixTranslation(&m, 0, 0, 0);
 	temp.FontID = FONT_CHAT;
