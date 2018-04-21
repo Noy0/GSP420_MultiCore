@@ -401,6 +401,21 @@ void GameCore::SingleUpdate(float dt)
 						m_PlayerScore[m_Turn] += 10;
 					}
 				}
+				int ballCount{ 0 };
+				for (int i = 0; i < tempPos.size(); ++i)
+				{
+					
+					if ((tempPos[i].Type == EP_SMALLMARBLE || tempPos[i].Type == EP_MEDIUMMARBLE ||
+						tempPos[i].Type == EP_LARGEMARBLE))
+					{
+						ballCount += 0;
+					}
+				}
+				if (ballCount == 0)
+				{
+					m_SubState = SGS_GAMEOVER;
+					break;
+				}
 			}
 			//Change player
 			
@@ -408,6 +423,13 @@ void GameCore::SingleUpdate(float dt)
 			m_Turn %= 4;
 			m_SubState = SGS_SPINNING;
 			break;
+		}
+	case SGS_GAMEOVER:
+		{
+			if(m_PlayerScore[0] < m_PlayerScore[1])
+				gCoreMgr->HandleMessage(new SMessageRunScript("shoot.txt"));
+			else
+				gCoreMgr->HandleMessage(new SMessageRunScript("shoot.txt"));
 		}
 	}
 	m_TextOutBuffer.clear();
