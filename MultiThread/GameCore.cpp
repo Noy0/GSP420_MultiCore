@@ -107,8 +107,8 @@ void GameCore::Update(float dt)
 	}
 	//Exports
 	m_TextOut.Overwrite(m_TextOutBuffer);
-	m_CameraPosition.x = cos(m_ViewAngle) * 40;
-	m_CameraPosition.z = sin(m_ViewAngle) * 40;
+	///m_CameraPosition.x = cos(m_ViewAngle) * 40;
+	///m_CameraPosition.z = sin(m_ViewAngle) * 40;
 	gCoreMgr->HandleMessage(new SMessageCameraPos(m_CameraPosition));
 	//gCoreMgr->HandleMessage(new SMessageCameraPos(D3DXVECTOR3(0,10,20)));
 	//gCoreMgr->HandleMessage(new SMessageCameraUp(D3DXVECTOR3(1, 0, 0)));
@@ -691,12 +691,14 @@ void GameCore::ExecuteMessageShoot()
 				{
 				case VK_LEFT:
 					{
-						m_ViewAngle -= 0.1;
+						//m_ViewAngle -= 0.1;
+						m_CameraPosition.x -= 0.5;
 						break;
 					}
 				case VK_RIGHT:
 					{
-						m_ViewAngle += 0.1;
+						//m_ViewAngle += 0.1;
+						m_CameraPosition.x += 0.5;
 						break;
 					}
 				case VK_DOWN:
