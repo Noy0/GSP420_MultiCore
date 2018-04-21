@@ -442,7 +442,7 @@ void GameCore::SingleUpdate(float dt)
 			m_TextOutBuffer.push_back(temp);
 		}
 	}
-	//m_TextOutBuffer.clear();
+	m_TextOutBuffer.clear();
 	char num[40];
 	DD_ScreenTextData temp;
 	//==============Player's score==================
