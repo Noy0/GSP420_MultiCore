@@ -753,6 +753,115 @@ void GameCore::ExecuteMessageShoot()
 						m_SubState = SGS_HOLD;
 						break;
 					}
+				case VK_NUMPAD2:
+					{
+					static int temp = 100;
+					gCoreMgr->HandleMessage(new SMessageRunScript("shoot.txt"));
+					gCoreMgr->HandleMessage(new SMessageAddEntity(&temp, EP_PLAYERMARBLE, m_CameraPosition));
+					gCoreMgr->HandleMessage(new SMessageSetVelocity(&temp, (D3DXVECTOR3(0, 0, 0) - m_CameraPosition) * 1.5f));
+					gCoreMgr->HandleMessage(new SMessageSetAngularVelocity(&temp, D3DXVECTOR3(0.0f, 0.0f, 10000.0f)));
+					gCoreMgr->HandleMessage(new SMessageImpulseForce(&temp, D3DXVECTOR3(0.0f, -500.0f, 0.0f)));
+					//Change state
+					m_SubState = SGS_HOLD;
+					break;
+					}
+				case VK_NUMPAD3:
+					{
+					static int temp = 100;
+					gCoreMgr->HandleMessage(new SMessageRunScript("shoot.txt"));
+					gCoreMgr->HandleMessage(new SMessageAddEntity(&temp, EP_PLAYERMARBLE, m_CameraPosition));
+					gCoreMgr->HandleMessage(new SMessageSetVelocity(&temp, (D3DXVECTOR3(0, 0, 0) - m_CameraPosition) * 1.5f));
+					gCoreMgr->HandleMessage(new SMessageSetAngularVelocity(&temp, D3DXVECTOR3(0.0f, -10000.0f, 10000.0f)));
+					gCoreMgr->HandleMessage(new SMessageImpulseForce(&temp, D3DXVECTOR3(0.0f, -500.0f, 1000.0f)));
+					//Change state
+					m_SubState = SGS_HOLD;
+					break;
+					}
+				case VK_NUMPAD1:
+				{
+					static int temp = 100;
+					gCoreMgr->HandleMessage(new SMessageRunScript("shoot.txt"));
+					gCoreMgr->HandleMessage(new SMessageAddEntity(&temp, EP_PLAYERMARBLE, m_CameraPosition));
+					gCoreMgr->HandleMessage(new SMessageSetVelocity(&temp, (D3DXVECTOR3(0, 0, 0) - m_CameraPosition) * 1.5f));
+					gCoreMgr->HandleMessage(new SMessageSetAngularVelocity(&temp, D3DXVECTOR3(0.0f, 0.0f, 0.0f)));
+					gCoreMgr->HandleMessage(new SMessageImpulseForce(&temp, D3DXVECTOR3(0.0f, -500.0f, -1000.0f)));
+					//Change state
+					m_SubState = SGS_HOLD;
+					break;
+				}
+				case VK_NUMPAD5:
+				{
+					static int temp = 100;
+					gCoreMgr->HandleMessage(new SMessageRunScript("shoot.txt"));
+					gCoreMgr->HandleMessage(new SMessageAddEntity(&temp, EP_PLAYERMARBLE, m_CameraPosition));
+					gCoreMgr->HandleMessage(new SMessageSetVelocity(&temp, (D3DXVECTOR3(0, 0, 0) - m_CameraPosition) * 1.5f));
+					gCoreMgr->HandleMessage(new SMessageSetAngularVelocity(&temp, D3DXVECTOR3(0.0f, 0.0f, 10000.0f)));
+					gCoreMgr->HandleMessage(new SMessageSetForce(&temp, D3DXVECTOR3(0.0f, 500.0f, 0.0f)));
+					//Change state
+					m_SubState = SGS_HOLD;
+					break;
+				}
+				case VK_NUMPAD6:
+				{
+					static int temp = 100;
+					gCoreMgr->HandleMessage(new SMessageRunScript("shoot.txt"));
+					gCoreMgr->HandleMessage(new SMessageAddEntity(&temp, EP_PLAYERMARBLE, m_CameraPosition));
+					gCoreMgr->HandleMessage(new SMessageSetVelocity(&temp, (D3DXVECTOR3(0, 0, 0) - m_CameraPosition) * 1.5f));
+					gCoreMgr->HandleMessage(new SMessageSetAngularVelocity(&temp, D3DXVECTOR3(0.0f, 0.0f, 10000.0f)));
+					gCoreMgr->HandleMessage(new SMessageImpulseForce(&temp, D3DXVECTOR3(0.0f, 0.0f, 1000.0f)));
+					//Change state
+					m_SubState = SGS_HOLD;
+					break;
+				}
+				case VK_NUMPAD4:
+				{
+					static int temp = 100;
+					gCoreMgr->HandleMessage(new SMessageRunScript("shoot.txt"));
+					gCoreMgr->HandleMessage(new SMessageAddEntity(&temp, EP_PLAYERMARBLE, m_CameraPosition));
+					gCoreMgr->HandleMessage(new SMessageSetVelocity(&temp, (D3DXVECTOR3(0, 0, 0) - m_CameraPosition) * 1.5f));
+					gCoreMgr->HandleMessage(new SMessageSetAngularVelocity(&temp, D3DXVECTOR3(0.0f, 0.0f, 0.0f)));
+					gCoreMgr->HandleMessage(new SMessageImpulseForce(&temp, D3DXVECTOR3(0.0f, 0.0f, -1000.0f)));
+					//Change state
+					m_SubState = SGS_HOLD;
+					break;
+				}
+				case VK_NUMPAD8:
+				{
+					static int temp = 100;
+					gCoreMgr->HandleMessage(new SMessageRunScript("shoot.txt"));
+					gCoreMgr->HandleMessage(new SMessageAddEntity(&temp, EP_PLAYERMARBLE, m_CameraPosition));
+					gCoreMgr->HandleMessage(new SMessageSetVelocity(&temp, (D3DXVECTOR3(0, 0, 0) - m_CameraPosition) * 1.5f));
+					gCoreMgr->HandleMessage(new SMessageSetAngularVelocity(&temp, D3DXVECTOR3(0.0f, 80000.0f, 0.0f)));
+					gCoreMgr->HandleMessage(new SMessageSetForce(&temp, D3DXVECTOR3(0.0f, 500.0f, 0.0f)));
+					//Change state
+					m_SubState = SGS_HOLD;
+					break;
+				}
+				case VK_NUMPAD9:
+				{
+					static int temp = 100;
+					gCoreMgr->HandleMessage(new SMessageRunScript("shoot.txt"));
+					gCoreMgr->HandleMessage(new SMessageAddEntity(&temp, EP_PLAYERMARBLE, m_CameraPosition));
+					gCoreMgr->HandleMessage(new SMessageSetVelocity(&temp, (D3DXVECTOR3(0, 0, 0) - m_CameraPosition) * 1.5f));
+					gCoreMgr->HandleMessage(new SMessageSetAngularVelocity(&temp, D3DXVECTOR3(0.0f, 8000.0f, 0.0f)));
+					gCoreMgr->HandleMessage(new SMessageImpulseForce(&temp, D3DXVECTOR3(0.0f, 0.0f, 1000.0f)));
+					//Change state
+					m_SubState = SGS_HOLD;
+					break;
+				}
+				case VK_NUMPAD7:
+				{
+					static int temp = 100;
+					gCoreMgr->HandleMessage(new SMessageRunScript("shoot.txt"));
+					gCoreMgr->HandleMessage(new SMessageAddEntity(&temp, EP_PLAYERMARBLE, m_CameraPosition));
+					gCoreMgr->HandleMessage(new SMessageSetVelocity(&temp, (D3DXVECTOR3(0, 0, 0) - m_CameraPosition) * 1.5f));
+					gCoreMgr->HandleMessage(new SMessageSetAngularVelocity(&temp, D3DXVECTOR3(0.0f, 8000.0f, 0.0f)));
+					gCoreMgr->HandleMessage(new SMessageImpulseForce(&temp, D3DXVECTOR3(0.0f, 0.0f, -1000.0f)));
+					//Change state
+					m_SubState = SGS_HOLD;
+					break;
+				}
+
 				}
 				delete msg;
 				break;
